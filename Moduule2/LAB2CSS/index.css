@@ -94,16 +94,100 @@ article {
 .text-style {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
-    color: #333;
+    color: #34a491;
 }
 
 /* IV. Styling text */
 /* Put styles for questions 1-10 here */
+.text-style {
+    color: #333;
+    /* Q1: Font color */
 
+    font-size: 18px;
+    /* Q2: Font size */
+
+    line-height: 1.5;
+    /* Q3: Line height */
+
+    font-weight: 400;
+    /* Q4: Font weight (can be 100 to 900 or 'bold') */
+
+    font-family: 'Roboto', sans-serif;
+    /* Q5: Font family from Google Fonts */
+
+    text-align: justify;
+    /* Q6: Text alignment */
+
+    letter-spacing: 1px;
+    /* Q7: Letter spacing */
+
+    word-spacing: 2px;
+    /* Q8: Word spacing */
+
+    text-transform: capitalize;
+    /* Q9: Text transformation */
+
+    text-decoration: underline;
+    /* Q10: Text decoration */
+}
 
 /* V. Styling links */
 /* Put styles for questions 1-3 here */
+a,
+a:link {
+    color: #0066cc;
+    /* Link color */
+    font-size: 16px;
+    /* Font size */
+    font-weight: 600;
+    /* Font weight */
+    text-decoration: underline;
+    /* Text decoration */
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #b62e05;
+    /* Darker color */
+
+    text-decoration: underline;
+    /* Different text decoration */
+}
+
+a:visited {
+    color: #660099;
+    /* Visited link color */
+
+    font-style: italic;
+    /* Font style */
+}
 
 
 /* VI. calc() */
 /* Put styles for questions 1-3 here */
+
+.calc-style {
+    width: calc(100vw - 100px);
+    /* Dynamic width */
+    background-color: #f0f0f0;
+    /* Background color */
+    padding: 10px;
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+.fixed-width-col {
+    width: 350px;
+    display: inline-block;
+    vertical-align: top;
+    /* Align side by side */
+}
+
+.fluid-col {
+    display: inline-block;
+    width: calc(100% - 350px);
+    /* Dynamic width */
+    vertical-align: top;
+    /* Align side by side */
+}
