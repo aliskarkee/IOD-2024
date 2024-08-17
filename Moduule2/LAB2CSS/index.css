@@ -1,0 +1,109 @@
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+/* I. Selectors */
+/* 1.1 - Article styling */
+article {
+    margin: 20px0;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+/* 1.2 - Class selector */
+.style-me1 {
+    color: red;
+}
+
+/* 1.3 - ID selector */
+#style-me2 {
+    color: blue;
+}
+
+/* 1.4 - Combined class and ID selector */
+.style-me1#style-me2 {
+    color: purple;
+}
+
+
+
+/* Put styles for questions 2.1 and 2.2 here */
+/* 2.1 - Child combinator */
+.my-children-are-styled>p {
+    background: lightgreen;
+}
+
+/* 2.2 - Descendant combinator */
+.my-descendants-are-styledp {
+    background: red;
+
+
+    /* II. Box model and common properties */
+    /* Put styles for questions 1-8 here */
+
+    background-color: #0b0000;
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+
+/* 2 - Box-sizing demonstration */
+.box {
+    width: 50%;
+    height: 150px;
+}
+
+/* 3 - Border styling */
+.box {
+    border: 10px solid #000;
+    border-radius: 20px;
+    outline: 10px solid #f0f;
+}
+
+/* 4 - Overflow */
+.box {
+    overflow: auto;
+}
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+
+.position-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffdddd;
+    padding: 10px;
+}
+
+
+/* 2 - Relative positioning */
+.position-relative {
+    position: relative;
+    background-color: #d4f4dd;
+}
+
+/* 3 - Sticky positioning */
+.position-sticky {
+    position: sticky;
+    top: 0;
+    background-color: #ccccff;
+    padding: 10px;
+}
+
+/* IV. Styling text */
+.text-style {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
