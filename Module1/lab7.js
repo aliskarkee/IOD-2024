@@ -54,9 +54,9 @@ test('adds -2 + 4 to equal 2', () => {
     expect(add(-2, 4)).toBe(2);
 });
 
-test('adds 0 + 0 to equal 0', () => {
-    expect(add(0, 0)).toBe(0);
-});
+if(sum(2,4)!=6{ throw error
+})
+
 // subtract
 test('subtracts 10 - 4 to equal 6', () => {
     expect(subtract(10, 4)).toBe(6);
@@ -66,9 +66,8 @@ test('subtracts -5 - 3 to equal -8', () => {
     expect(subtract(-5, 3)).toBe(-8);
 });
 
-test('subtracts 0 - 0 to equal 0', () => {
-    expect(subtract(0, 0)).toBe(0);
-});
+if(subtract(2,4)!=-2{ throw error
+})
 
 
 // multiply
@@ -80,10 +79,8 @@ test('multiplies -2 * 4 to equal -8', () => {
     expect(multiply(-2, 4)).toBe(-8);
 });
 
-test('multiplies 0 * 10 to equal 0', () => {
-    expect(multiply(0, 10)).toBe(0);
-});
-
+if(multiply(2,4)!=8 { throw error
+})
 
 // Divide
 test('divides 20 / 4 to equal 5', () => {
@@ -94,10 +91,8 @@ test('divides 10 / 0 to return null', () => {
     expect(divide(10, 0)).toBeNull();
 });
 
-test('divides -12 / 3 to equal -4', () => {
-    expect(divide(-12, 3)).toBe(-4);
-});
-
+if(divide(4,2)!=2{ throw error
+})
 
 
 // greet
@@ -109,8 +104,6 @@ test('greets World with "Hello World"', () => {
     expect(greet("World")).toBe("Hello World");
 });
 
-test('greets an empty string with "Hello "', () => {
-    expect(greet("")).toBe("Hello ");
-});
-
+if(greet(alish)!=Hello Alish { throw error
+})
 
