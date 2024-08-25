@@ -59,7 +59,6 @@ li {
     object-fit: cover;
 }
 
-/* Media queries for tablets and smaller devices */
 @media (max-width: 768px) {
     .main-container {
         flex-direction: column;
@@ -68,6 +67,8 @@ li {
 
     body {
         scroll-behavior: smooth;
+        display: flex;
+        flex-direction: column;
     }
 
     .leftside,
@@ -76,38 +77,31 @@ li {
         display: flex;
         flex-direction: column;
         position: sticky;
-        /* Full width for each section */
     }
 
     .bottom {
         position: fixed;
-        /* Place at the bottom of the content flow */
     }
 }
 
-/* Media queries for phones and very small devices */
 @media (max-width: 480px) {
     h2 {
         font-size: 1.2em;
-        /* Smaller heading font size */
     }
 
     .image {
         width: 120px;
-        /* Adjust image size */
         height: 120px;
     }
 
     .leftside,
     .rightside {
         padding: 10px;
-        /* Reduced padding */
     }
 
     .bottom {
         padding: 8px;
         /* Adjust bottom padding */
         font-size: 0.9em;
-        /* Smaller font size */
     }
 }
