@@ -1,9 +1,7 @@
 /* I. Selectors */
-/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
-/* I. Selectors */
 /* 1.1 - Article styling */
 article {
-    margin: 20px0;
+    margin: 20px 0;
     padding: 20px;
     border: 1px solid black;
 }
@@ -23,50 +21,35 @@ article {
     color: purple;
 }
 
-
-
-/* Put styles for questions 2.1 and 2.2 here */
+/* Combinators */
 /* 2.1 - Child combinator */
 .my-children-are-styled>p {
     background: lightgreen;
 }
 
 /* 2.2 - Descendant combinator */
-.my-descendants-are-styledp {
+.my-descendants-are-styled p {
     background: red;
+}
 
+/* II. Box model and common properties */
+.box {
+    display: flex;
+    justify-content: center;
 
-    /* II. Box model and common properties */
-    /* Put styles for questions 1-8 here */
-
-    background-color: #0b0000;
+    background-color: #13d68e;
     margin: 20px;
     padding: 15px;
-    border: 2px solid #333;
-    box-sizing: border-box;
-}
+    border: 5px solid #000;
+    border-radius: 10px;
 
-/* 2 - Box-sizing demonstration */
-.box {
+    box-sizing: border-box;
     width: 50%;
     height: 150px;
-}
-
-/* 3 - Border styling */
-.box {
-    border: 10px solid #000;
-    border-radius: 20px;
-    outline: 10px solid #f0f;
-}
-
-/* 4 - Overflow */
-.box {
     overflow: auto;
 }
 
 /* III. Positioning */
-/* Put styles for questions 1-3 here */
-
 .position-absolute {
     position: absolute;
     top: 0;
@@ -75,14 +58,11 @@ article {
     padding: 10px;
 }
 
-
-/* 2 - Relative positioning */
 .position-relative {
     position: relative;
     background-color: #d4f4dd;
 }
 
-/* 3 - Sticky positioning */
 .position-sticky {
     position: sticky;
     top: 0;
@@ -95,99 +75,52 @@ article {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     color: #34a491;
-}
-
-/* IV. Styling text */
-/* Put styles for questions 1-10 here */
-.text-style {
-    color: #333;
-    /* Q1: Font color */
-
-    font-size: 18px;
-    /* Q2: Font size */
-
     line-height: 1.5;
-    /* Q3: Line height */
-
     font-weight: 400;
-    /* Q4: Font weight (can be 100 to 900 or 'bold') */
-
-    font-family: 'Roboto', sans-serif;
-    /* Q5: Font family from Google Fonts */
-
     text-align: justify;
-    /* Q6: Text alignment */
-
     letter-spacing: 1px;
-    /* Q7: Letter spacing */
-
     word-spacing: 2px;
-    /* Q8: Word spacing */
-
     text-transform: capitalize;
-    /* Q9: Text transformation */
-
     text-decoration: underline;
-    /* Q10: Text decoration */
 }
 
 /* V. Styling links */
-/* Put styles for questions 1-3 here */
 a,
 a:link {
     color: #0066cc;
-    /* Link color */
     font-size: 16px;
-    /* Font size */
     font-weight: 600;
-    /* Font weight */
     text-decoration: underline;
-    /* Text decoration */
 }
 
 a:hover,
 a:active,
 a:focus {
     color: #b62e05;
-    /* Darker color */
-
     text-decoration: underline;
-    /* Different text decoration */
 }
 
 a:visited {
     color: #660099;
-    /* Visited link color */
-
     font-style: italic;
-    /* Font style */
 }
 
-
 /* VI. calc() */
-/* Put styles for questions 1-3 here */
-
 .calc-style {
     width: calc(100vw - 100px);
-    /* Dynamic width */
     background-color: #f0f0f0;
-    /* Background color */
     padding: 10px;
     overflow: hidden;
-    /* Prevent overflow */
 }
 
 .fixed-width-col {
     width: 350px;
     display: inline-block;
     vertical-align: top;
-    /* Align side by side */
 }
 
 .fluid-col {
     display: inline-block;
     width: calc(100% - 350px);
-    /* Dynamic width */
     vertical-align: top;
-    /* Align side by side */
 }

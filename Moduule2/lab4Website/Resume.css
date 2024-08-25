@@ -1,79 +1,59 @@
-.image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-attachment: fixed;
-    background-color: rgb(196, 156, 55);
+    display: flex;
+    height: 100vh;
 }
 
 .leftside {
-    background-color: #4a4e9d;
-    /* Background color */
+    background-color: #4B5563;
+    color: white;
     padding: 20px;
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-    float: left;
+.rightside {
+    background-color: #D97706;
+    padding: 20px;
+    width: 70%;
+    overflow-y: auto;
+}
+
+.rightside section {
+    margin-bottom: 20px;
+}
+
+.bottom {
+    background-color: #065F46;
     color: white;
-}
-
-
-h2,
-h3 {
-    margin-bottom: 15px;
-}
-
-.personal,
-.skills {
-    margin-bottom: 30px;
-}
-
-p,
-pre {
-    margin: 5px 0;
-}
-
-.first {
-    font-weight: bold;
-}
-
-p:first-of-type {
-    margin-top: 15px;
-}
-
-/* Styling for links and text */
-a,
-p {
-    color: skyblue;
-    text-decoration: underline;
-}
-
-/* Specific skill formatting */
-.skill p {
-    display: inline-block;
-    width: 120px;
-    /* Align the skill names */
-    color: white;
-}
-
-
-
-#bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #109994;
-    padding: 10px;
     text-align: center;
-    text-decoration: none;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
+h2 {
+    margin-top: 0;
+    color: #111827;
+}
 
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }

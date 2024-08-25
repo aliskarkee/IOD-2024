@@ -48,7 +48,6 @@ html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    box-sizing: border-box;
 }
 
 .navbar {
@@ -61,35 +60,26 @@ html {
 
 .navbar-brand a {
     color: #fff;
+    /* text-decoration: none; */
+}
+
+ul {
     text-decoration: none;
-    font-size: 24px;
 }
 
 .navbar-menu {
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
-.navbar-menu li {
-    margin-left: 20px;
-}
-
-.navbar-menu a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-}
-
-/* Toggle button styles */
 .navbar-toggle {
+    display: none;
     background: none;
     border: none;
     color: #fff;
     font-size: 24px;
-    cursor: pointer;
-    display: none;
 }
 
 /* Responsive Styles */
@@ -98,19 +88,10 @@ html {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #444;
-        position: absolute;
-        top: 50px;
-        left: 0;
     }
 
     .navbar-menu.active {
         display: flex;
-    }
-
-    .navbar-menu li {
-        margin: 0;
-        text-align: center;
     }
 
     .navbar-toggle {
