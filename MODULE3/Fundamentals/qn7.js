@@ -26,6 +26,3 @@ const basketballGame = {
         return this;
     }
 };
-
-// Example chaining
-basketballGame.basket().freeThrow().incrementFoul().threePointer().halfTime().basket().fullTime();
