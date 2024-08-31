@@ -36,17 +36,20 @@ article {
 .box {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 
     background-color: #13d68e;
     margin: 20px;
     padding: 15px;
     border: 5px solid #000;
-    border-radius: 10px;
+    border-radius: 50%;
+
 
     box-sizing: border-box;
-    width: 50%;
+    width: 150px;
     height: 150px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 /* III. Positioning */
