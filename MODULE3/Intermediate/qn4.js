@@ -14,7 +14,25 @@ function camelCase(cssProp){
   return cssProp
      .split('-')                    
     .map((word, index) => index === 0 ? word :word.charAt(0).toUpperCase() +  word.slice(1) )
-
     .join('');  }
 
+
+  console.log(camelCase('margin-left'));
+
+const words = cssProp.split('-');
+let result = "";
+let index = 0;
+ 
+for(const word of words){
+    if (index == 0) {
+        result += word;
+    }
+    else 
+    {result += word.charAt(0).toUpperCase() + word.slice(1);
+
+    }
+    return result;
+
+    
+}
 
