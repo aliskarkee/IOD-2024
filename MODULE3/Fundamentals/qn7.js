@@ -26,3 +26,6 @@ const basketballGame = {
         return this;
     }
 };
+
+//modify each of the above object methods to enable function chaining as below:
+basketballGame.basket().freeThrow().incrementFoul().threePointer().halfTime().basket().fullTime();
