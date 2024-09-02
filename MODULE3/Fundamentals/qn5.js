@@ -12,5 +12,6 @@
 
 // ARROW FUNCTION
 const getGreeting = (name) => {return  'Hello' + name + '!' };
-    console.log(getGreeting("Karki")) ;
+
+    console.log(getGreeting (" Karki ")) ;
     

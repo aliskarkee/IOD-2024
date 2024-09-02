@@ -5,5 +5,5 @@
 // } else {
 // result += 'greater than 10';
 // }
-let a = 2, b=3; 
-console.log( (a+b<10) ? 'less than 10' : 'greater than 10 ' )
+let a = 2, b = 3;
+console.log((a + b < 10) ? `${a} + ${b} is less than 10` : `${a} + ${b} is greater than 10`);
