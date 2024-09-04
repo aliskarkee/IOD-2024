@@ -6,23 +6,51 @@
 // no concatenation rules are followed at console.log
 
 
-function currencyAddiction(float1, float2){
+// function currencyAddiction(float1, float2){
 
- let sum = float1+float2;
- return sum.toFixed(2);
-// num1= (`${float1} + ${float2}`);
-// num1 = currencyAddiction; 
+//  let sum = float1+float2;
+//  return sum.toFixed(2);
+// // num1= (`${float1} + ${float2}`);
+// // num1 = currencyAddiction; 
+// }
+
+// console.log(currencyAddiction(1.1111, 2.2222));
+
+
+function performCurrencyOperation(currencyOperations, float1, float2) {
+    let result;
+
+    switch (currencyOperations) {
+        case "+":
+            result = float1 + float2;
+            console.log(float1, float2, "+");
+            return result.toFixed(2); 
+        case "-":
+            result = float1 - float2;
+            console.log(float1, float2, "-");
+             return result.toFixed(2);            
+        case "/":
+            result = float1 / float2;
+            console.log(float1, float2, "/");
+            return result.toFixed(2); 
+
+        case "*":
+            result = float1 * float2;
+            console.log(float1, float2, "*");
+            return result.toFixed(2);        
+            
+            default:
+            console.log("Unsupported operation");
+            return null;
+    }
 }
 
-console.log(currencyAddiction(1.1111, 2.2222));
+// Example usage
+console.log(performCurrencyOperation("+", 3.333, 2.2222));  
+console.log(performCurrencyOperation("-", 3.333, 2.2222));  
+console.log(performCurrencyOperation("*", 3.333, 2.2222));  
+console.log(performCurrencyOperation("/", 3.333, 2.2222));  
 
 
-function currencyOperations(float1, float2, operation){
-   switch
-
-   }
 
 
-
-    
-}
