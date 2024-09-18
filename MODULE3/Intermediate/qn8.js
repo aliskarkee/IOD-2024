@@ -56,3 +56,37 @@
 
 // console.log("\nNames in Combined Phone Book:");
 // printAllNames(phoneBook);
+// a) Create a new phoneBookDEF Map to store names beginning with D, E or F
+
+
+const phoneBookDEF = new Map();
+
+const entriesDEF = [
+  ['David', '0466223344'],
+  ['Eva', '0477334455'],
+  ['Frank', '0488445566']
+];
+phoneBookDEF.set(entriesDEF[0][0], entriesDEF[0][1]);
+phoneBookDEF.set(entriesDEF[1][0], entriesDEF[1][1]);
+phoneBookDEF.set(entriesDEF[2][0], entriesDEF[2][1]);
+
+const phoneBookABC = new Map();
+phoneBookABC.set('Annabelle', '0412312343');
+phoneBookABC.set('Barry', '0433221117');
+phoneBookABC.set('Caroline', '0455221182');
+
+phoneBookABC.set('Caroline', '0455229999'); 
+
+function printPhoneBook(contacts) {
+  for (const [name, phone] of contacts) {
+    console.log(`${name}: ${phone}`);
+  }
+}
+
+console.log('PhoneBookABC:');
+printPhoneBook(phoneBookABC);
+
+const phoneBook = new Map([...phoneBookABC, ...phoneBookDEF]);
+
+console.log('\nCombined PhoneBook:');
+printPhoneBook(phoneBook);

@@ -7,9 +7,11 @@ let car = {
   }
 };
 
-car.description(); // Works
+car.description(); 
 setTimeout(() => car.description(), 200); 
+
 let newCar = { ...car, year: 2024 };
 setTimeout(car.description.bind(car), 200); 
+
 let anotherCar = { ...car, make: "Tesla" }; 
 setTimeout(car.description.bind(car), 200); 
