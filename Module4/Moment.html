@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date-fns Example</title>
+    <!-- Load date-fns and date-fns-tz -->
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@2.30.0/umd/date-fns.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns-tz@1.3.5/umd/date-fns-tz.min.js"></script>
+</head>
+
+<body>
+    <h2>Days Between Birthdate and Current Date</h2>
+    <div id="DOB"></div>
+
+    <h2>Number of Years, Months, and Days Between Birthdate and Current Date</h2>
+    <div id="Difference"></div>
+
+    <h2>Date Closest to the Current Date</h2>
+    <div id="closest"></div>
+
+    <h2>First Date Before or After Second Date</h2>
+    <div id="first"></div>
+
+    <h2>Current Time in London</h2>
+    <div id="London"></div>
+
+    <script>
+        // Your birthdate (replace with your birthdate)
+        const birthdate = new Date(2000, 0, 1); // January 1, 2000
+        const currentDate = new Date();
+
+        // 1. Calculate the number of days between birthdate and current date
+        const daysDifference = differenceInDays(currentDate, birthdate);
+        document.getElementById("DOB").innerHTML = `Days between birthdate and current date: ${daysDifference} days`;
+
+        // 2. Display the number of years, months, and days between birthdate and current date
+        const yearsDifference = differenceInYears(currentDate, birthdate);
+        const monthsDifference = differenceInMonths(currentDate, birthdate) % 12;
+        const daysRemaining = differenceInDays(
+            currentDate,
+            addMonths(addYears(birthdate, yearsDifference), monthsDifference)
+        );
+        document.getElementById("Difference").innerHTML = `${yearsDifference} years, ${monthsDifference} months, and ${daysRemaining} days`;
+
+        // 3. Given two dates, display the date closest to the current date
+        const date1 = new Date(2000, 0, 1);
+        const date2 = new Date(2030, 0, 1);
+        const closestDate = closestTo(currentDate, [date1, date2]);
+        document.getElementById("closest").innerHTML = `Closest date to today: ${closestDate.toDateString()}`;
+
+        // 4. Given two dates, display whether the first date is before or after the second date
+        const isFirstBefore = isBefore(date1, date2);
+        const comparisonText = isFirstBefore ? "First date is before the second date" : "First date is after the second date";
+        document.getElementById("first").innerHTML = comparisonText;
+
+        // 5. Display the current time in London using date-fns-tz
+        const londonTimeZone = 'Europe/London';
+        const londonDate = dateFnsTz.utcToZonedTime(new Date(), londonTimeZone);
+        const formattedLondonTime = dateFnsTz.format(londonDate, 'HH:mm:ss', { timeZone: londonTimeZone });
+        document.getElementById("London").innerHTML = `Current time in London: ${formattedLondonTime}`;
+    </script>
+</body>
+
+</html>

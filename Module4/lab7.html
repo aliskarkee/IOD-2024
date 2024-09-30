@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Example</title>
+    <style>
+        body {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            animation-name: slide;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: 2;
+        }
+
+        @keyframes slide {
+            0% {
+                top: 0;
+                background-color: blue;
+            }
+
+            50% {
+                top: calc(100vh - 100px);
+                background-color: red;
+            }
+
+            100% {
+                top: 0;
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
