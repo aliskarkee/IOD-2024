@@ -15,26 +15,47 @@
 
     <script type="text/javascript">
         // Initialize the echarts instance based on the prepared DOM
-        let myChart = echarts.init(documentgetElementById('main'));
+        let myChart = echarts.init(document.getElementById('main'));
 
         // Initial chart options with empty data
         let options = {
-            title: { text: 'Fake Store Categories' },
+            title: {
+                text: 'Fake Store Categories',
+                left: 'center'
+            },
             tooltip: {  // Enable tooltips for hover interaction
                 trigger: 'axis'
             },
             xAxis: {
                 type: 'category',
-                data: []
+                data: [],
+                axisLabel: {
+                    rotate: 30 // Rotate x-axis labels for better readability
+                }
             },
             yAxis: {
-                type: 'value'
+                type: 'value',
+                name: '# of products',
+                min: 0,
+                axisLabel: {
+                    formatter: '{value}'
+                }
             },
             series: [{
                 name: '# of products',
                 type: 'bar',
-                data: []
-            }]
+                data: [],
+                itemStyle: {
+                    color: '#3498db' // Set the color of the bars
+                }
+            }],
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            animation: true // Enable animation
         };
 
         myChart.setOption(options);

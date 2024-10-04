@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Page</title>
+    <style>
+        .news-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .news-title {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .news-content {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Latest News</h1>
+
+    <!-- News Container -->
+    <div id="news-container"></div>
+
+    <!-- Form to Add New News -->
+    <div>
+        <input type="text" id="news-title" placeholder="News Title" required>
+        <textarea id="news-content" placeholder="News Content" required></textarea>
+        <button onclick="submitNews()">Submit News</button>
+    </div>
+
+    <!-- Button to Stop News Refresh -->
+    <button onclick="stopInterval()">Stop Refresh</button>
+
+    <script>
+        // Initial News Array
+        let news = [
+            { id: 1, title: 'Election Results', content: 'Newly elected minister...' },
+            { id: 2, title: 'Sporting Success', content: 'World Cup winners...' },
+            { id: 3, title: 'Tornado Warning', content: 'Residents should prepare...' }
+        ];
+
+        let intervalId; // Variable to hold the interval ID
+
+        // Function to populate news on the page
+        function populateNews() {
+            const newsContainer = document.getElementById('news-container');
+            newsContainer.innerHTML = ''; // Clear current news
+            news.forEach(item => {
+                const newsItem = document.createElement('div');
+                newsItem.classList.add('news-item');
+
+                const title = document.createElement('div');
+                title.classList.add('news-title');
+                title.innerText = item.title;
+
+                const content = document.createElement('div');
+                content.classList.add('news-content');
+                content.innerText = item.content;
+
+                newsItem.appendChild(title);
+                newsItem.appendChild(content);
+                newsContainer.appendChild(newsItem);
+            });
+        }
+
+        // Function to submit new news via the form
+        function submitNews() {
+            const title = document.getElementById('news-title').value;
+            const content = document.getElementById('news-content').value;
+
+            if (title && content) {
+                const newNewsItem = {
+                    id: news.length + 1, // Generate a new ID
+                    title: title,
+                    content: content
+                };
+
+                // Add the new news item to the news array
+                news.push(newNewsItem);
+
+                // Clear the input fields
+                document.getElementById('news-title').value = '';
+                document.getElementById('news-content').value = '';
+            }
+        }
+
+        // Start the interval to refresh the news every 5 seconds
+        function startInterval() {
+            intervalId = setInterval(() => {
+                populateNews(); // Refresh news
+            }, 5000);
+        }
+
+        // Function to stop the interval
+        function stopInterval() {
+            clearInterval(intervalId);
+        }
+
+        // Initialize the news on page load
+        window.onload = function () {
+            populateNews();
+            startInterval(); // Start refreshing the news
+        };
+    </script>
+</body>
+
+</html>
