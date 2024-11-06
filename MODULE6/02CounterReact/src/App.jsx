@@ -4,15 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-let counter = 15; 
+  const [counter, setCount] = useState(0)
+// let counter = 15; 
 const addValue = ()=>{
-  console.log("Value added", Math.random());
+  if (counter <20)
+  setCount(counter+1)
+}
 
-}
 const subValue = ()=>{
-  console.log("Value Decreased", Math.random())
-}
+  if(counter >0 )
+  setCount(counter-1)
+
+};
   return (
     <>
      <h1>Chai Aur React </h1>
@@ -25,8 +28,11 @@ const subValue = ()=>{
      <button
       onClick = {subValue}> 
       Decrease Value</button>
-    </>
-  )
-}
 
+      <p id = "Footer">Footer: Sorry the maximum increase value is 20 and minimum Decrease calue is 0</p>
+    </>
+
+  )
+
+}
 export default App
